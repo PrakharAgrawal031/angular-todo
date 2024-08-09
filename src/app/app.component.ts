@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { UserComponent } from "../user/user.component";
-
+import { DUMMY_USERS } from '../dummy-users';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,4 +11,9 @@ import { UserComponent } from "../user/user.component";
 })
 export class AppComponent {
   title = 'todo-app';
+  users = DUMMY_USERS;
+
+  onSeletion(id: string){
+    console.log("Selected user id: " + id);
+  }
 }
