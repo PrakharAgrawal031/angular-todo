@@ -12,7 +12,7 @@ export const USERS_TASKS = [
     {
       id: 'u3',
       name: 'Marcus Johnson',
-      task:null
+      task:'task3'
     },
     {
       id: 'u4',

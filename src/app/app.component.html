@@ -3,20 +3,24 @@
   <ul id="users">
     @for (user of users; track user.id){
       <li>
-        <app-user [user]="user" (select)="onSelection($event)" />
+        <app-user  [user]="user" [selected]="user.id===currentUser" (select)="onSelection($event)" />
       </li>
     }
-<!--     
-    <li>
-      <app-user [user]="users[1]" (select)="onSelection($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[2]" (select)="onSelection($event)" />
-    </li>
-    <li>
-      <app-user [user]="users[3]" (select)="onSelection($event)" />
-    </li> -->
+    <!-- <li *ngFor = "let user of users">
+      <app-user [user]="user" (select)="onSelection($event)" />
+    </li> used in older angular versions instead of @for-->
   </ul>
 
-  <app-tasks [name]="selectedUser?.name" [task]="selectedUser?.task" />
+  @if (selectedUser) {
+    <app-tasks [name]="selectedUser.name" [userId]="selectedUser.id" />
+  }@else {
+    <p class="fallback">Select a user</p>
+  }
+
+  <!-- <app-tasks *ngIf="selectedUser"; else 'fallback'; [name]="selectedUser!.name" [task]="selectedUser!.task" />
+
+  <ng-template #fallback>
+    <p class="fallback">Select a user</p>
+  </ng-template> -->
+
 </main>
