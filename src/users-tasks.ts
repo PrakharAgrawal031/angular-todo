@@ -1,32 +1,26 @@
 export const USERS_TASKS = [
     {
       id: 'u1',
-      name: 'Jasmine Washington',
-      task:'task1'
+      name: 'Jasmine Washington'
     },
     {
       id: 'u2',
-      name: 'Emily Thompson',
-      task:'task2'
+      name: 'Emily Thompson'
     },
     {
       id: 'u3',
-      name: 'Marcus Johnson',
-      task:'task3'
+      name: 'Marcus Johnson'
     },
     {
       id: 'u4',
-      name: 'David Miller',
-      task:'task4'
+      name: 'David Miller'
     },
     {
       id: 'u5',
-      name: 'Priya Patel',
-      task:'task5'
+      name: 'Priya Patel'
     },
     {
       id: 'u6',
-      name: 'Arjun Singh',
-      task:'task6'
+      name: 'Arjun Singh'
     },
   ];

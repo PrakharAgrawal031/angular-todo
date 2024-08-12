@@ -7,11 +7,11 @@
     </header>
     <ul>
         @if(addingTask){
-            <app-new-task (cancel)="onCancelAddTask()" (add)="addNewTask($event)"/>
+            <app-new-task [userId]="userId" (close)="onCloseAddTask()"/>
         }
         @for (task of selectedUserTasks; track task.id){
             <li>
-                <app-task [task]="task" (complete)="onCompleteTask($event)"/>
+                <app-task [task]="task"/>
             </li>
         }
         
